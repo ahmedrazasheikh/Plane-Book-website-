@@ -1,0 +1,68 @@
+.containerOfSlider {
+    position: absolute;
+    left: 90px;
+}
+
+@media (max-width: 768px) {
+    .containerOfSlider {
+        /* padding-right: 300px; */
+      position: relative;
+      left: -10px;
+    }
+  }
+
+  
+
+  /* Hamburger and Close Icon styles */
+.hamburger-icon, .close-icon {
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bar, .close-bar {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.close-bar {
+  transform-origin: center;
+}
+
+.close-bar:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.close-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.close-bar:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+/* Initially hide the navigation */
+.navigation {
+  display: none;
+}
+
+/* Show the navigation when the showNav state is true */
+.show .navigation {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Hide the hamburger icon when the navigation is shown */
+.show .hamburger-icon {
+  display: none;
+}
+
+/* Show the close icon when the navigation is shown */
+.show .close-icon {
+  display: flex;
+}
